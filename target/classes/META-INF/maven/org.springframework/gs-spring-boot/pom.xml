@@ -13,10 +13,15 @@
         <version>1.5.3.RELEASE</version>
     </parent>
 	<properties>
-	<java.version>1.8</java.version>
-	   <appengine.target.version>1.9.10</appengine.target.version>
+		<java.version>1.8</java.version>
+	   	<appengine.target.version>1.9.51</appengine.target.version>
 	</properties>
     <dependencies>
+    	<dependency>
+			<groupId>com.google.appengine</groupId>
+			<artifactId>appengine-tools-sdk</artifactId>
+			<version>${appengine.target.version}</version>
+			</dependency>
 	     <!-- Compile/runtime dependencies -->
 	    <dependency>
 	        <groupId>com.google.appengine</groupId>
