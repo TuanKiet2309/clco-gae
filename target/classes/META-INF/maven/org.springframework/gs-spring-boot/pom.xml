@@ -12,13 +12,16 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.3.RELEASE</version>
     </parent>
-
+	<properties>
+	<java.version>1.8</java.version>
+	   <appengine.target.version>1.9.10</appengine.target.version>
+	</properties>
     <dependencies>
 	     <!-- Compile/runtime dependencies -->
 	    <dependency>
 	        <groupId>com.google.appengine</groupId>
 	        <artifactId>appengine-api-1.0-sdk</artifactId>
-	        <version>1.9.9</version>
+	        <version>${appengine.target.version}</version>
 	    </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,10 +42,6 @@
         <!-- end::tests[] -->
     </dependencies>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -57,7 +56,7 @@
 		    <plugin>
 	            <groupId>com.google.appengine</groupId>
 	            <artifactId>appengine-maven-plugin</artifactId>
-	            <version>1.9.9</version>
+	            <version>${appengine.target.version}</version>
 	        </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
